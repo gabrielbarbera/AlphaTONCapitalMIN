@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaTON Capital Corp. - Investor Relations</title>
+    <meta name="description" content="AlphaTON Capital Corp. (Nasdaq: ATON) - Bridging institutional capital with the Telegram Open Network ecosystem through regulated, transparent investment vehicles.">
+    
+    <!-- Pure.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+    
+    <!-- Custom AlphaTON Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <div class="row row-center">
+                <div class="column column-25">
+                    <a href="index.html" class="logo-link" aria-label="AlphaTON Capital Corp. Home">
+                        <img src="assets/img/logos/alphaton-logo.svg" alt="AlphaTON Capital Corp." class="logo">
+                    </a>
+                </div>
+                <div class="column column-75">
+                    <div class="nav-desktop">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                            <li><a href="news.html" class="nav-link">News & Events</a></li>
+                            <li><a href="financials.html" class="nav-link">Financials & Filings</a></li>
+                            <li><a href="governance.html" class="nav-link">Corporate Governance</a></li>
+                            <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+                            <li><a href="board.html" class="nav-link">Board of Directors</a></li>
+                            <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-mobile">
+                        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu" aria-hidden="true">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link active" aria-current="page">Home</a></li>
+                    <li><a href="news.html" class="mobile-nav-link">News & Events</a></li>
+                    <li><a href="financials.html" class="mobile-nav-link">Financials & Filings</a></li>
+                    <li><a href="governance.html" class="mobile-nav-link">Corporate Governance</a></li>
+                    <li><a href="leadership.html" class="mobile-nav-link">Leadership</a></li>
+                    <li><a href="board.html" class="mobile-nav-link">Board of Directors</a></li>
+                    <li><a href="faqs.html" class="mobile-nav-link">FAQs</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero py-20">
+            <div class="container">
+                <div class="row row-center">
+                    <div class="column column-50">
+                        <h1 class="text-gradient font-bold mb-4">AlphaTON Capital Corp.</h1>
+                        <h2 class="text-primary font-semibold mb-6">Nasdaq: ATON</h2>
+                        <p class="text-secondary mb-8">
+                            Bridging institutional capital with the Telegram Open Network (TON) ecosystem through regulated, 
+                            transparent investment vehicles. We provide institutional-grade access to the TON blockchain's 
+                            innovative DeFi protocols and infrastructure.
+                        </p>
+                        <div class="hero-actions flex flex-column sm-flex-row gap-4">
+                            <a href="financials.html" class="button button-primary w-full sm-w-auto">View SEC Filings</a>
+                            <a href="contact.html" class="button button-outline w-full sm-w-auto">Contact IR</a>
+                        </div>
+                    </div>
+                    <div class="column column-50">
+                        <!-- Stock Chart Container -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">ATON Stock Performance</h3>
+                                <p class="card-subtitle">Real-time data from Nasdaq</p>
+                            </div>
+                            <div class="stock-chart-container">
+                                <canvas id="stockChart" width="400" height="200" role="img" aria-label="AlphaTON Capital Corp. stock price chart"></canvas>
+                            </div>
+                            <div class="stock-info">
+                                <div class="row">
+                                    <div class="column column-33">
+                                        <div class="stock-metric">
+                                            <span class="metric-label">Current Price</span>
+                                            <span class="metric-value" id="currentPrice">$0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="column column-33">
+                                        <div class="stock-metric">
+                                            <span class="metric-label">24h Change</span>
+                                            <span class="metric-value" id="dailyChange">+0.00%</span>
+                                        </div>
+                                    </div>
+                                    <div class="column column-33">
+                                        <div class="stock-metric">
+                                            <span class="metric-label">Volume</span>
+                                            <span class="metric-value" id="volume">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Overview -->
+        <section class="company-overview py-16">
+            <div class="container">
+                <div class="row">
+                    <div class="column column-100">
+                        <h2 class="text-center mb-8">Company Overview</h2>
+                    </div>
+                </div>
+                <div class="row grid grid-cols-1 md-grid-cols-2 lg-grid-cols-3 gap-6">
+                    <div class="column">
+                        <div class="card text-center">
+                            <h3 class="text-primary font-semibold mb-4">Mission</h3>
+                            <p class="text-secondary">
+                                Bridge institutional capital with the crypto ecosystem through regulated, 
+                                transparent investment vehicles focused on the Telegram Open Network.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card text-center">
+                            <h3 class="text-primary font-semibold mb-4">Strategy</h3>
+                            <p class="text-secondary">
+                                Invest in TON ecosystem projects, DeFi protocols, and infrastructure 
+                                while maintaining institutional-grade compliance and transparency.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card text-center">
+                            <h3 class="text-primary font-semibold mb-4">Focus</h3>
+                            <p class="text-secondary">
+                                Telegram Open Network (TON) blockchain ecosystem, including DeFi protocols, 
+                                infrastructure projects, and innovative applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="key-metrics py-16 bg-card">
+            <div class="container">
+                <div class="row">
+                    <div class="column column-100">
+                        <h2 class="text-center mb-8">Key Metrics</h2>
+                    </div>
+                </div>
+                <div class="row grid grid-cols-1 sm-grid-cols-2 lg-grid-cols-4 gap-6">
+                    <div class="column">
+                        <div class="metric-card text-center">
+                            <div class="metric-number text-primary font-bold">$50M+</div>
+                            <div class="metric-label text-secondary">Assets Under Management</div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="metric-card text-center">
+                            <div class="metric-number text-primary font-bold">15+</div>
+                            <div class="metric-label text-secondary">TON Ecosystem Investments</div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="metric-card text-center">
+                            <div class="metric-number text-primary font-bold">100%</div>
+                            <div class="metric-label text-secondary">Regulatory Compliance</div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="metric-card text-center">
+                            <div class="metric-number text-primary font-bold">24/7</div>
+                            <div class="metric-label text-secondary">Market Monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent News -->
+        <section class="recent-news py-16">
+            <div class="container">
+                <div class="row">
+                    <div class="column column-100">
+                        <h2 class="text-center mb-8">Recent News & Updates</h2>
+                    </div>
+                </div>
+                <div class="row grid grid-cols-1 lg-grid-cols-2 gap-6">
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Q4 2024 Earnings Release</h3>
+                                <p class="card-subtitle">January 15, 2025</p>
+                            </div>
+                            <p class="text-secondary mb-4">
+                                AlphaTON Capital Corp. reports strong Q4 2024 performance with increased 
+                                AUM and strategic investments in TON ecosystem projects.
+                            </p>
+                            <a href="news.html" class="button button-outline">Read More</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">TON Ecosystem Partnership</h3>
+                                <p class="card-subtitle">January 10, 2025</p>
+                            </div>
+                            <p class="text-secondary mb-4">
+                                Strategic partnership with leading TON DeFi protocol expands 
+                                AlphaTON's investment opportunities in the ecosystem.
+                            </p>
+                            <a href="news.html" class="button button-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-100 text-center">
+                        <a href="news.html" class="button button-primary">View All News</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investor Resources -->
+        <section class="investor-resources py-16 bg-card">
+            <div class="container">
+                <div class="row">
+                    <div class="column column-100">
+                        <h2 class="text-center mb-8">Investor Resources</h2>
+                    </div>
+                </div>
+                <div class="row grid grid-cols-1 sm-grid-cols-2 lg-grid-cols-4 gap-6">
+                    <div class="column">
+                        <div class="resource-card text-center">
+                            <div class="resource-icon mb-4">
+                                <img src="assets/img/icons/file-text.svg" alt="SEC Filings" width="48" height="48">
+                            </div>
+                            <h4 class="text-primary font-semibold mb-2">SEC Filings</h4>
+                            <p class="text-secondary mb-4">Access all regulatory filings and reports</p>
+                            <a href="financials.html" class="button button-outline">View Filings</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="resource-card text-center">
+                            <div class="resource-icon mb-4">
+                                <img src="assets/img/icons/building-bank.svg" alt="Corporate Governance" width="48" height="48">
+                            </div>
+                            <h4 class="text-primary font-semibold mb-2">Governance</h4>
+                            <p class="text-secondary mb-4">Corporate policies and committee information</p>
+                            <a href="governance.html" class="button button-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="resource-card text-center">
+                            <div class="resource-icon mb-4">
+                                <img src="assets/img/icons/chart-bar.svg" alt="Leadership Team" width="48" height="48">
+                            </div>
+                            <h4 class="text-primary font-semibold mb-2">Leadership</h4>
+                            <p class="text-secondary mb-4">Meet our executive team and board</p>
+                            <a href="leadership.html" class="button button-outline">View Team</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="resource-card text-center">
+                            <div class="resource-icon mb-4">
+                                <img src="assets/img/icons/mail.svg" alt="Contact IR" width="48" height="48">
+                            </div>
+                            <h4 class="text-primary font-semibold mb-2">Contact IR</h4>
+                            <p class="text-secondary mb-4">Get in touch with investor relations</p>
+                            <a href="contact.html" class="button button-outline">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row grid grid-cols-1 md-grid-cols-3 gap-6">
+                <div class="column">
+                    <h3>AlphaTON Capital Corp.</h3>
+                    <p>Nasdaq: ATON</p>
+                    <p>Bridging institutional capital with the Telegram Open Network ecosystem.</p>
+                </div>
+                <div class="column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="financials.html">SEC Filings</a></li>
+                        <li><a href="governance.html">Corporate Governance</a></li>
+                        <li><a href="news.html">Press Releases</a></li>
+                        <li><a href="contact.html">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Stay Informed</h4>
+                    <form class="newsletter-form" action="#" method="post">
+                        <label for="newsletter-email" class="sr-only">Subscribe to investor updates</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="button button-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row flex flex-column sm-flex-row justify-between items-center gap-4">
+                <div class="column">
+                    <p>&copy; 2024 AlphaTON Capital Corp. All rights reserved.</p>
+                </div>
+                <div class="column text-center sm-text-right">
+                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="terms.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+</html>
