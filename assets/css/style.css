@@ -350,18 +350,6 @@ a:focus {
   }
 }
 
-/* Auto-fit grid for flexible layouts */
-.cards-grid-auto {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
-}
-
-@media (min-width: 768px) {
-  .cards-grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  }
-}
 
 /* ==================== HEADER ==================== */
 .header {
@@ -635,7 +623,7 @@ a:focus {
 
 /* Homepage hero title with gradient */
 .hero-homepage .hero-title {
-  font-size: 4vw;
+  font-size: 5rem;
   margin-bottom: var(--spacing-lg);
   line-height: 1.2;
   font-weight: 800;
@@ -775,16 +763,6 @@ a:focus {
   -webkit-backdrop-filter: blur(48px) saturate(200%);
 }
 
-.button-clear {
-  background-color: transparent;
-  color: var(--white);
-}
-
-.button-clear:hover {
-  color: var(--white);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -875,11 +853,6 @@ a:focus {
 /* ==================== LISTS ==================== */
 .list-unstyled {
   list-style: none;
-}
-
-.list-item {
-  padding: var(--spacing-md) 0;
-  border-bottom: 1px solid rgba(114, 125, 161, 0.15);
 }
 
 /* ==================== FAQ ACCORDION ==================== */
@@ -1604,23 +1577,6 @@ a:focus {
   50% {
     transform: translate(20px, 20px) scale(1.1);
   }
-}
-
-/* ==================== BACKGROUND GRADIENTS ==================== */
-.bg-gradient-to-br {
-  background: linear-gradient(
-    to bottom right,
-    var(--primary),
-    var(--purple),
-    var(--primary)
-  );
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* ==================== MODERN ANIMATIONS ==================== */
