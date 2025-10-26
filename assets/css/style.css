@@ -105,9 +105,60 @@
   box-sizing: border-box;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* List items maintain their default styles */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 body {
@@ -210,6 +261,18 @@ a:hover {
 a:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+a:focus-visible:not(:active) {
+  outline: none;
 }
 
 /* ==================== LAYOUT UTILITIES ==================== */
@@ -349,7 +412,6 @@ a:focus {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 
 /* ==================== HEADER ==================== */
 .header {
