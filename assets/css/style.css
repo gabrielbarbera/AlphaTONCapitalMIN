@@ -1615,3 +1615,272 @@ a:focus {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ==================== MODERN ANIMATIONS ==================== */
+
+/* Page load fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Section animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: slideInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Card hover animations */
+@keyframes cardHover {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.01);
+  }
+  100% {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.card:hover {
+  animation: cardHover 0.3s ease-out forwards;
+}
+
+/* Hero content animation */
+@keyframes heroSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: heroSlide 0.8s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.hero-title {
+  animation: heroSlide 0.8s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.hero-subtitle {
+  animation: heroSlide 0.8s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* Button pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.25) inset,
+      0 4px 12px rgba(62, 123, 250, 0.3);
+  }
+  50% {
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.35) inset,
+      0 6px 20px rgba(62, 123, 250, 0.5);
+  }
+}
+
+.button-primary:hover {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Navigation link slide animation */
+.nav-link {
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Staggered card animations */
+.cards-grid > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.cards-grid > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.cards-grid > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.cards-grid > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.cards-grid-2 > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.cards-grid-2 > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+/* Icon hover animation */
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.card-icon:hover img {
+  animation: iconFloat 1s ease-in-out infinite;
+  filter: drop-shadow(0 0 32px rgba(91, 159, 255, 1))
+    drop-shadow(0 0 48px rgba(91, 159, 255, 0.8))
+    drop-shadow(0 0 64px rgba(91, 159, 255, 0.5));
+}
+
+/* Smooth scale on focus */
+@keyframes focusScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  animation: focusScale 0.3s ease-out forwards;
+}
+
+/* Table row hover animation */
+@keyframes rowSlide {
+  from {
+    padding-left: 0;
+  }
+  to {
+    padding-left: 8px;
+  }
+}
+
+.table tr:hover {
+  animation: rowSlide 0.3s ease-out forwards;
+}
+
+/* Mobile menu entrance */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active {
+  animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* FAQ accordion animation */
+@keyframes expandDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.faq-answer.active {
+  animation: expandDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* SVG icon animations */
+.social-link {
+  transition: all var(--transition-base);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.social-link:hover {
+  animation: pulse 0.6s ease-out;
+}
+
+/* Section title fade-in */
+.section-title {
+  animation: slideInUp 0.6s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+/* Newsletter form animation */
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.newsletter-form {
+  animation: formAppear 0.6s ease-out;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
