@@ -9,6 +9,9 @@
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets/css/style.css">
   
+  <!-- Chart.js for Stock Chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  
 </head>
 <body>
 
@@ -57,17 +60,7 @@
   <main id="main-content">
     
     <!-- Hero Section -->
-    <section class="hero">
-      <svg class="blob-background" viewBox="0 0 800 600">
-        <defs>
-          <radialGradient id="blob-gradient" cx="50%" cy="50%">
-            <stop offset="0%" stop-color="rgba(59, 130, 246, 0.4)"/>
-            <stop offset="100%" stop-color="rgba(59, 130, 246, 0.05)"/>
-          </radialGradient>
-        </defs>
-        <ellipse class="blob-path" cx="400" cy="300" rx="400" ry="300"/>
-      </svg>
-      
+    <section class="hero-homepage">
       <div class="container">
         <div class="hero-content">
           <h1 class="hero-title">A Public Digital Asset Company on TON</h1>
@@ -125,30 +118,22 @@
       <div class="container">
         <h2 class="section-title">Strategic Pillars</h2>
         
-        <div class="row">
-          <div class="column-50" style="margin-bottom: var(--spacing-lg);">
-            <div class="card">
-              <h3>Validator & Treasury Operations</h3>
-              <p class="text-secondary">Staking and infrastructure at scale</p>
-            </div>
+        <div class="cards-grid-2">
+          <div class="card">
+            <h3>Validator & Treasury Operations</h3>
+            <p class="text-secondary">Staking and infrastructure at scale</p>
           </div>
-          <div class="column-50" style="margin-bottom: var(--spacing-lg);">
-            <div class="card">
-              <h3>Ecosystem Investments</h3>
-              <p class="text-secondary">Supporting TON-native protocols, DeFi, apps, and liquidity strategies</p>
-            </div>
+          <div class="card">
+            <h3>Ecosystem Investments</h3>
+            <p class="text-secondary">Supporting TON-native protocols, DeFi, apps, and liquidity strategies</p>
           </div>
-          <div class="column-50" style="margin-bottom: var(--spacing-lg);">
-            <div class="card">
-              <h3>Institutional Access</h3>
-              <p class="text-secondary">Bridging digital assets with traditional capital markets</p>
-            </div>
+          <div class="card">
+            <h3>Institutional Access</h3>
+            <p class="text-secondary">Bridging digital assets with traditional capital markets</p>
           </div>
-          <div class="column-50" style="margin-bottom: var(--spacing-lg);">
-            <div class="card">
-              <h3>Transparent Governance</h3>
-              <p class="text-secondary">Nasdaq-listed reporting standards and oversight</p>
-            </div>
+          <div class="card">
+            <h3>Transparent Governance</h3>
+            <p class="text-secondary">Nasdaq-listed reporting standards and oversight</p>
           </div>
         </div>
       </div>
@@ -206,34 +191,26 @@
       <div class="container">
         <h2 class="section-title">Key Metrics</h2>
         
-        <div class="row">
-          <div class="column-50">
-            <div class="card text-center">
-              <div class="alphaton-spinner" style="margin: 0 auto;"></div>
-              <h3 class="metric-value">TON Tokens Held</h3>
-              <p class="text-muted">Loading...</p>
-            </div>
+        <div class="cards-grid-2">
+          <div class="card text-center">
+            <div class="alphaton-spinner" style="margin: 0 auto;"></div>
+            <h3 class="metric-value">TON Tokens Held</h3>
+            <p class="text-muted">Loading...</p>
           </div>
-          <div class="column-50">
-            <div class="card text-center">
-              <div class="alphaton-spinner" style="margin: 0 auto;"></div>
-              <h3 class="metric-value">Validators Operated</h3>
-              <p class="text-muted">Loading...</p>
-            </div>
+          <div class="card text-center">
+            <div class="alphaton-spinner" style="margin: 0 auto;"></div>
+            <h3 class="metric-value">Validators Operated</h3>
+            <p class="text-muted">Loading...</p>
           </div>
-          <div class="column-50">
-            <div class="card text-center">
-              <div class="alphaton-spinner" style="margin: 0 auto;"></div>
-              <h3 class="metric-value">Estimated Staking Yield</h3>
-              <p class="text-muted">Loading...</p>
-            </div>
+          <div class="card text-center">
+            <div class="alphaton-spinner" style="margin: 0 auto;"></div>
+            <h3 class="metric-value">Estimated Staking Yield</h3>
+            <p class="text-muted">Loading...</p>
           </div>
-          <div class="column-50">
-            <div class="card text-center">
-              <div class="alphaton-spinner" style="margin: 0 auto;"></div>
-              <h3 class="metric-value">Treasury Allocation</h3>
-              <p class="text-muted">Loading...</p>
-            </div>
+          <div class="card text-center">
+            <div class="alphaton-spinner" style="margin: 0 auto;"></div>
+            <h3 class="metric-value">Treasury Allocation</h3>
+            <p class="text-muted">Loading...</p>
           </div>
         </div>
       </div>
@@ -242,51 +219,43 @@
     <!-- Quick Links Section -->
     <section class="section">
       <div class="container">
-        <div class="row">
-          <div class="column-50">
-            <div class="card">
-              <div class="card-icon">
-                <img src="assets/img/icons/file-text.svg" alt="" style="width: 48px; height: 48px;">
-              </div>
-              <h3 class="card-title">SEC Filings</h3>
-              <p class="card-text">View all regulatory filings</p>
-              <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001964644" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="button button-outline">
-                View Filings
-              </a>
+        <div class="cards-grid-2">
+          <div class="card card-center">
+            <div class="card-icon">
+              <img src="assets/img/icons/file-text.svg" alt="" style="width: 32px; height: 32px;">
             </div>
+            <h3 class="card-title">SEC Filings</h3>
+            <p class="card-text">View all regulatory filings</p>
+            <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001964644" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="button button-outline">
+              View Filings
+            </a>
           </div>
-          <div class="column-50">
-            <div class="card">
-              <div class="card-icon">
-                <img src="assets/img/icons/newspaper.svg" alt="" style="width: 48px; height: 48px;">
-              </div>
-              <h3 class="card-title">Press Releases</h3>
-              <p class="card-text">Latest company news</p>
-              <a href="news.html" class="button button-outline">Read News</a>
+          <div class="card card-center">
+            <div class="card-icon">
+              <img src="assets/img/icons/newspaper.svg" alt="" style="width: 32px; height: 32px;">
             </div>
+            <h3 class="card-title">Press Releases</h3>
+            <p class="card-text">Latest company news</p>
+            <a href="news.html" class="button button-outline">Read News</a>
           </div>
-          <div class="column-50">
-            <div class="card">
-              <div class="card-icon">
-                <img src="assets/img/icons/building-bank.svg" alt="" style="width: 48px; height: 48px;">
-              </div>
-              <h3 class="card-title">Governance</h3>
-              <p class="card-text">Corporate policies</p>
-              <a href="governance.html" class="button button-outline">View Policies</a>
+          <div class="card card-center">
+            <div class="card-icon">
+              <img src="assets/img/icons/building-bank.svg" alt="" style="width: 32px; height: 32px;">
             </div>
+            <h3 class="card-title">Governance</h3>
+            <p class="card-text">Corporate policies</p>
+            <a href="governance.html" class="button button-outline">View Policies</a>
           </div>
-          <div class="column-50">
-            <div class="card">
-              <div class="card-icon">
-                <img src="assets/img/icons/mail.svg" alt="" style="width: 48px; height: 48px;">
-              </div>
-              <h3 class="card-title">Contact IR</h3>
-              <p class="card-text">Get in touch</p>
-              <a href="contact.html" class="button button-outline">Contact Us</a>
+          <div class="card card-center">
+            <div class="card-icon">
+              <img src="assets/img/icons/mail.svg" alt="" style="width: 32px; height: 32px;">
             </div>
+            <h3 class="card-title">Contact IR</h3>
+            <p class="card-text">Get in touch</p>
+            <a href="contact.html" class="button button-outline">Contact Us</a>
           </div>
         </div>
       </div>
@@ -311,7 +280,7 @@
                      aria-label="Email address">
             </div>
             <button type="submit" class="button button-primary">Subscribe</button>
-            <p style="font-size: var(--font-size-xs); color: var(--gray-500); margin-top: var(--spacing-sm);">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: var(--spacing-sm); line-height: 1.4;">
               By subscribing, you agree to receive investor communications from AlphaTON Capital. You can unsubscribe at any time.
             </p>
           </form>
@@ -346,7 +315,7 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <div>
+        <div class="footer-brand">
           <img src="assets/img/logos/Wordmark White.svg" alt="AlphaTON Capital" class="footer-logo">
           <p class="footer-copyright">© 2025 AlphaTON Capital Corp. All rights reserved.</p>
         </div>
@@ -358,21 +327,21 @@
              rel="noopener noreferrer" 
              class="social-link" 
              aria-label="Follow us on X (Twitter)">
-            <img src="assets/img/icons/brand-x.svg" alt="" style="width: 24px; height: 24px;">
+            <img src="assets/img/icons/brand-x.svg" alt="X" style="width: 20px; height: 20px;">
           </a>
           <a href="https://t.me/AlphaTONCapital" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="social-link" 
              aria-label="Join us on Telegram">
-            <img src="assets/img/icons/brand-telegram.svg" alt="" style="width: 24px; height: 24px;">
+            <img src="assets/img/icons/brand-telegram.svg" alt="Telegram" style="width: 20px; height: 20px;">
           </a>
           <a href="https://www.linkedin.com/company/alphaton-capital/" 
              target="_blank" 
              rel="noopener noreferrer" 
              class="social-link" 
              aria-label="Follow us on LinkedIn">
-            <img src="assets/img/icons/brand-linkedin.svg" alt="" style="width: 24px; height: 24px;">
+            <img src="assets/img/icons/brand-linkedin.svg" alt="LinkedIn" style="width: 20px; height: 20px;">
           </a>
         </div>
       </div>

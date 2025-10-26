@@ -50,35 +50,39 @@
 
   <main id="main-content">
     
-    <section class="hero" style="background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 50%, var(--primary) 100%); padding: var(--spacing-3xl) 0;">
+    <!-- Page Header Section -->
+    <section class="hero" style="padding: var(--spacing-3xl) 0;">
       <div class="container">
-        <h1 class="text-center" style="margin-bottom: var(--spacing-lg);">News & Press Releases</h1>
-        <p class="text-center" style="font-size: var(--font-size-lg); color: rgba(255, 255, 255, 0.9);">Stay updated with the latest news, press releases, and corporate announcements from AlphaTON Capital Corp.</p>
+        <div class="hero-content">
+          <h1 class="hero-title">News & Press Releases</h1>
+          <p class="hero-subtitle">Stay updated with the latest news, press releases, and corporate announcements from AlphaTON Capital Corp.</p>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Latest News & Press Releases</h2>
-        
         <div class="row-center">
           <div class="column-75">
-            <div class="card">
-              <div style="text-align: center; padding: var(--spacing-3xl);">
-                <div class="alphaton-spinner" style="margin: 0 auto 20px;"></div>
-                <p style="color: var(--gray-400); margin-bottom: var(--spacing-lg);">Loading RSS feed content...</p>
-                <p style="color: var(--gray-500); font-size: var(--font-size-sm);">
-                  News content will be loaded from RSS feed integration.
-                </p>
+            <!-- Loading Container -->
+            <div class="loading-container" style="text-align: center;">
+              <div class="card" style="padding: var(--spacing-3xl);">
+                <div class="alphaton-spinner" style="margin: 0 auto var(--spacing-xl);"></div>
+                <h3 style="margin-bottom: var(--spacing-lg);">Loading Latest News...</h3>
+                <p class="text-secondary" style="margin-bottom: var(--spacing-lg);">Fetching RSS feed from AlphaTON Capital...</p>
               </div>
             </div>
-            
+
+            <!-- News Container (will be populated by news.js) -->
+            <div id="news-container"></div>
+
+            <!-- RSS Feed Link -->
             <div style="text-align: center; margin-top: var(--spacing-xl);">
               <a href="https://alphatoncapital.com/feed/" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="button button-outline">
-                RSS Feed →
+                View Full RSS Feed →
               </a>
             </div>
           </div>
@@ -138,5 +142,6 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/news.js"></script>
 </body>
 </html>
