@@ -909,7 +909,7 @@ Depending on your location, you may have the following rights:
 - **Favicon**: assets/img/favicon.png
 - **Logos**:
   - Primary Logo Horizontal White.svg
-  - Primary Logo Horizontal.svg
+  - logo.svg
   - Wordmark White.svg
   - Wordmark.svg
 - **Background**: Background Arrows.png
